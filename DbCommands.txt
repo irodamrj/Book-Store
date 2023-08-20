@@ -1,0 +1,30 @@
+update-database
+add-migration aName
+When you change anything about db always run add-migration migrationName
+then update-database
+
+--Customer side validation : are the model constraints. 
+--Server side validations are the custom validations like ModelAstate.AddError
+To run sutom side validation, add script tot the view
+
+TempData[name] = value
+is used for 1 time rendering, e.g: when you redirect to a page 
+
+Dependency Injection Lifetimes
+Transient - every time a new object is created
+Scoped - Depends on http request, 1 time created, and used every time that service requested. once per request
+Singleton - 1 per app lifetime
+
+
+Viewbag.propertyName = Value: transfer data from controller to view. not vice versa.
+ViewData["key"] = value: same as ViewBag but; it is dictionary type and value must be type cast before use
+--viewBag internally inserts data into ViewData dictionary. so key of ViewData and viewBag must not match.
+--ViewBag and ViewData last during current http. values will be null if redirections occur
+--TempData["key"] = value: can stroe data between two consecutive req. Uses session to stroe data. for one time msg like notification
+
+
+
+https://datatables.net/ for searching
+https://icons.getbootstrap.com/
+https://bootswatch.com/ for themes
+https://codeseven.github.io/toastr/ for notification
